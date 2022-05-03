@@ -4,8 +4,27 @@ import Categories from "../../Data/Categories"
 import "./Home.css"
 
 const Home=({name,setName})=>{
+
     const[category,setCategory]=useState("");
     const{difficulty,setDifficulty}=useState("");
+    const{error,setError}=useState("false");
+
+    const history=useHistory();
+    const handleSubmit=()=>{
+        if(!category||!difficulty||!name){
+            setError(true);
+            return;
+        }
+        else{
+            setError(false)
+            fetchQuestions(category,difficulty)
+            history.pushState('/quiz');
+        }
+    }
+
+
+
+
     return(
         <div className="content">
                 <div className="setting">
@@ -51,7 +70,7 @@ const Home=({name,setName})=>{
                             <MenuItem key="Hard" value="hard">Hard</MenuItem>
                     </TextField>
 
-                    <Button variant="contained" color="primary" size="large">
+                    <Button variant="contained" color="primary" size="large" onClick={handleSubmit}>
                         Start Quiz
                     </Button>
 
