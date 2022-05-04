@@ -1,15 +1,21 @@
 import { Button, MenuItem, TextField } from "@material-ui/core"
 import { useState } from "react"
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage"
 import Categories from "../../Data/Categories"
 import "./Home.css"
+import {useNavigate} from "react-router-dom"
 
-const Home=({name,setName})=>{
 
-    const[category,setCategory]=useState("");
-    const{difficulty,setDifficulty}=useState("");
-    const{error,setError}=useState("false");
+const Home=({name,setName,fetchQuestions})=>{
 
-    const history=useHistory();
+    const[error,setError]=useState(false);
+    const[difficulty,setDifficulty]=useState("");
+
+
+    const[category,setCategory]=useState("")
+    
+    const nevigation= useNavigate();
+
     const handleSubmit=()=>{
         if(!category||!difficulty||!name){
             setError(true);
@@ -18,12 +24,10 @@ const Home=({name,setName})=>{
         else{
             setError(false)
             fetchQuestions(category,difficulty)
-            history.pushState('/quiz');
+            /*nevigation.pushState('/quiz');*/
+            nevigation('/quiz', { replace: true })
         }
     }
-
-
-
 
     return(
         <div className="content">
@@ -32,7 +36,7 @@ const Home=({name,setName})=>{
                     <span style={{fontSize:30}}>Quiz Setting</span>
 
                     <div className="setting_selects">
-                    
+                    {error && <ErrorMessage>Plaece Fill all the feild</ErrorMessage>}
                     <TextField 
                     style={{marginBottom:25}} 
                     label="Ener Your Name" 
@@ -45,8 +49,7 @@ const Home=({name,setName})=>{
                         variant="outlined" 
                         style={{marginBottom:30}}
                         onChange={(e)=>setCategory(e.target.value)}
-                        value={category}
-                        >
+                        value={category}>
                             {
                                 Categories.map((cat)=>(
                                     
@@ -56,9 +59,8 @@ const Home=({name,setName})=>{
 
                                 ))
                             }
-                        
-
                     </TextField>
+
                     <TextField select
                         label="Select Deficulty" 
                         variant="outlined" 

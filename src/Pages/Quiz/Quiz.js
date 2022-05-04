@@ -3,7 +3,7 @@ import React from 'react'
 const Quiz=()=>{
     return(
         <div>
-            Home Page
+            Quiz Page
         </div>
     )
 }
