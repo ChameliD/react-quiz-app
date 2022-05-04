@@ -8,7 +8,7 @@ const ErrorMessage=({children})=>{
                 borderRadius:4,
                 backgroundColor:'oranged',
                 textAlign:'center',
-                color:'white',
+                color:'orange',
                 textTransform:'capitalize',
             }}
         >
