@@ -21,7 +21,7 @@ const Quiz=({name,score,questions,setQuestions,setScore})=>{
         return options.sort(()=>Math.random() - 0.5);
     }
     return(
-        <div>
+        <div className="quiz">
             <span className='subtitle'>Welcome, {name}</span>
             {
                 questions?(
