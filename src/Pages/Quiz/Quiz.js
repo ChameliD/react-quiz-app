@@ -1,6 +1,7 @@
 import "./Quiz.css";
 import React, { useEffect, useState } from 'react'
 import {CircularProgress} from "@material-ui/core" 
+import Question from "../../components/Question/Question";
 
 const Quiz=({name,score,questions,setQuestions,setScore})=>{
     const[options,setOptions]=useState();
@@ -29,7 +30,19 @@ const Quiz=({name,score,questions,setQuestions,setScore})=>{
                     <div className="quizInfo">
                         <span>{questions[currQues].category}</span>
                         <span>Score:{score}</span>
-                    </div>                   </>
+                    </div>    
+                    <Question
+
+                        currQues={currQues}
+                        setCurreQues={setCurreQues}
+                        questions={questions}
+                        options={options}
+                        correct={questions[currQueQue]?.correct_answer}
+                        score={score}
+                        setScore={setScore}
+                        setQuestions={setQuestions}
+
+                    />   </>            
 
                 ):(
                     <CircularProgress
