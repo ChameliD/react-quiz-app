@@ -25,7 +25,11 @@ const Quiz=({name,score,questions,setQuestions,setScore})=>{
             <span className='subtitle'>Welcome, {name}</span>
             {
                 questions?(
-                    <> Questions</>
+                    <> 
+                    <div className="quizInfo">
+                        <span>{questions[currQues].category}</span>
+                        <span>Score:{score}</span>
+                    </div>                   </>
 
                 ):(
                     <CircularProgress
