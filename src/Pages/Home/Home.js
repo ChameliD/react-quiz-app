@@ -32,7 +32,7 @@ const Home=({name,setName,fetchQuestions})=>{
     return(
         <div className="content">
                 <div className="setting">
-                <img src='/teacher_2.png' className="banner" alt="Teacher"/>
+                
                     <span style={{fontSize:30}}>Quiz Setting</span>
 
                     <div className="setting_selects">
@@ -79,6 +79,7 @@ const Home=({name,setName,fetchQuestions})=>{
 
                     </div>
                 </div>
+                <img src='/teacher_2.png' className="banner" alt="Teacher"/>
         </div>
     )
 }

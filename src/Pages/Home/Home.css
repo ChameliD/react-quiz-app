@@ -23,7 +23,7 @@
     .content{
         flex-direction: column-reverse;
         align-items: center;
-        text-align: center;
+        
     }
     .banner{
         width:85%;
