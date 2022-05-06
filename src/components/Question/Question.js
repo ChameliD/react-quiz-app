@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import "./Question.css"
 
 const Question = ({
     currQues,
@@ -20,10 +21,17 @@ const Question = ({
       else if(i===correct){
         return "wrong"
       }
-      else if(i==correct){
+      else if(i===correct){
         return "select"
       }
     };
+
+    const handeleCheack=(i)=>{
+      setSelected(i);
+      if(i===correct)setScore(score+1);
+      setError(false);
+    };
+
   return (
     <div>
       <h1>Question {currQues+1}</h1>
@@ -35,7 +43,7 @@ const Question = ({
             options &&
             options.map((i)=>(
               <button
-              onClick={()=>{}}
+              onClick={()=>handeleCheack(i)}
               className={`singleOption ${selected && handleSelected(i)}`}
               key={i}
               disabled={selected}>
