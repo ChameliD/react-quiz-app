@@ -12,7 +12,7 @@ const Question = ({
     correct,
     score,
     setScore,
-    setQuestions
+    
 }) => {
     const[selected,setSelected]=useState();
     const[error,setError]=useState(false);
@@ -41,7 +41,16 @@ const Question = ({
       if(currQues>8){
         nevigation('/result')
       }
+      else if(selected){
+        setCurreQues(currQues+1);
+        setSelected();
+      }
+      else{
+        setError("Please select an option first");
+      }
     }
+
+    const handleQuit=()=>{};
     
 
   return (

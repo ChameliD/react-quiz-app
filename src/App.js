@@ -37,7 +37,7 @@ function App() {
           setScore={setScore}
           setQuestions={setQuestions}
           />}/>
-          <Route exact path="/result" element={<Result/>}/>
+          <Route exact path="/result" element={<Result  score={score}/>}/>
         </Routes>
       </div>
       <Footer/>
