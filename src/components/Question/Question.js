@@ -33,7 +33,7 @@ const Question = ({
     };
 
   return (
-    <div>
+    <div className='question'>
       <h1>Question {currQues+1}</h1>
       <div className='singleQuestion'>
         <h2>{questions[currQues].question}</h2>
@@ -49,10 +49,10 @@ const Question = ({
               disabled={selected}>
                 {i}
               </button>
-
             ))
           }
         </div>
+
       </div>  
     </div>
   )
