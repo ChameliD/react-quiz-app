@@ -1,4 +1,6 @@
+import { Button } from '@material-ui/core';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import "./Question.css"
 
@@ -14,6 +16,8 @@ const Question = ({
 }) => {
     const[selected,setSelected]=useState();
     const[error,setError]=useState(false);
+    const nevigation = useNavigate();
+
     const handleSelected=(i)=>{
       if(selected===i && selected===correct){
         return "select"
@@ -31,6 +35,14 @@ const Question = ({
       if(i===correct)setScore(score+1);
       setError(false);
     };
+
+    const handleNext=()=>
+    {
+      if(currQues>8){
+        nevigation('/result')
+      }
+    }
+    
 
   return (
     <div className='question'>
@@ -51,6 +63,26 @@ const Question = ({
               </button>
             ))
           }
+        </div>
+        <div className='controls'>
+          <Button
+          variant='contained'
+          color='secondary'
+          size='large'
+          style={{width:185}}
+          href='/'
+          onClick={handleQuit}>
+            Quite
+          </Button>
+          
+          <Button
+          variant='contained'
+          color='primary'
+          size='large'
+          style={{width:185}}
+          onClick={handleNext}>
+            Next Question
+          </Button>
         </div>
 
       </div>  
