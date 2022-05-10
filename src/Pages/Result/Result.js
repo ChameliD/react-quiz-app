@@ -1,9 +1,29 @@
-import React from 'react'
+import { Button } from '@material-ui/core';
+import {useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
+import './Result.css';
+const Result=({name,score})=>{
+    const nevigation = useNavigate();
 
-const Result=()=>{
+    useEffect(() => {
+        if(!name){
+            nevigation('/')
+        }
+      
+    }, [name,nevigation])
+    
     return(
-        <div>
-            Result Page
+        <div className='result'>
+            <span className='title'>Final Score : {score}</span>
+            <Button 
+            variant='contained'
+            color='secondary'
+            size='large'
+            style={{alignSel:"center",marginTop:20}}
+            href='/'
+            >
+                Go To Homepag
+            </Button>
         </div>
     )
 }
