@@ -15,6 +15,7 @@ const Result=({name,score})=>{
     return(
         <div className='result'>
             <span className='title'>Final Score : {score}</span>
+            
             <Button 
             variant='contained'
             color='secondary'
@@ -24,6 +25,17 @@ const Result=({name,score})=>{
             >
                 Go To Homepag
             </Button>
+
+            <Button 
+            variant='contained'
+            color='secondary'
+            size='large'
+            style={{alignSel:"center",marginTop:20}}
+            href='/comments'
+            >
+            Comments and Reviews
+            </Button>
+
         </div>
     )
 }
