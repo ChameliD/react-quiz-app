@@ -7,7 +7,8 @@ import Quiz from './Pages/Quiz/Quiz';
 import Result from './Pages/Result/Result';
 import { useState } from 'react';
 import axios from 'axios';
-import Comments from './components/Comments/Comments';
+import Comments from './Pages/Comments/Comments';
+import CommentCreater from './Pages/CommentCreater/CommentCreater'
 
 function App() {
   const [name,setName]=useState("");
@@ -40,6 +41,8 @@ function App() {
           />}/>
           <Route exact path="/result" element={<Result  name ={name} score={score}/>}/>
           <Route exact path='/comments' element={<Comments/>}/>
+          <Route exact path='/commentCreater' element={<CommentCreater/>}/>
+          
         </Routes>
       </div>
       <Footer/>
