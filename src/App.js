@@ -7,6 +7,8 @@ import Quiz from './Pages/Quiz/Quiz';
 import Result from './Pages/Result/Result';
 import { useState } from 'react';
 import axios from 'axios';
+import ViewComments from './Pages/ViewComments/ViewComments'
+import Comments from './Pages/Comments/Comments';
 
 
 function App() {
@@ -39,7 +41,8 @@ function App() {
           setQuestions={setQuestions}
           />}/>
           <Route exact path="/result" element={<Result  name ={name} score={score}/>}/>
-         
+         <Route exact path='/viewcomments' element={<ViewComments />}/>
+         <Route exact path='/comments' element={<Comments />}/>
           
         </Routes>
       </div>

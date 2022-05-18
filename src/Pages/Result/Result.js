@@ -31,7 +31,7 @@ const Result=({name,score})=>{
             color='secondary'
             size='large'
             style={{alignSel:"center",marginTop:20}}
-            href='/comments'
+            href='/viewcomments'
             >
             Comments and Reviews
             </Button>
