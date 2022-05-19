@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core'
 import axios from 'axios'
 import React, { Component } from 'react'
+import './Comments'
 
 class Comments extends Component {
   constructor(props) {
@@ -30,10 +31,10 @@ class Comments extends Component {
   render() {
     const{userId,title,body}=this.state
     return (
-      <div>
+      <div className='container'>
           <form onSubmit={this.submitHandler}>
 
-              <div>
+              <div >
                   Name 
                   <input 
                     
