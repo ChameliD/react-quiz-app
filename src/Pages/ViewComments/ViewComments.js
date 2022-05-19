@@ -1,7 +1,7 @@
 import { Button } from '@material-ui/core'
 import axios from 'axios'
 import React, { Component } from 'react'
-
+import './ViewComments.css'
 class ViewComments extends Component {
   constructor(props) {
     super(props)
@@ -46,8 +46,8 @@ class ViewComments extends Component {
             >
             Add a Comment
             </Button>
-            <div>
-          List of Posts
+            <div className='container'>
+         <h1>List of Posts</h1> 
           {
               posts.length ?
               posts.map(post=><div key={post.id}>{post.title}</div>) :
