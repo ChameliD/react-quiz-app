@@ -10,6 +10,7 @@ import axios from 'axios';
 import ViewComments from './Pages/ViewComments/ViewComments'
 import Comments from './Pages/Comments/Comments';
 import Infopage from './Pages/Infopage/Infopage';
+import Home from './Pages/Result/Home/Home';
 
 
 function App() {
@@ -32,7 +33,9 @@ function App() {
         <Header/> 
 
         <Routes>
-          <Route exact path="/" element={<QuizHome  fetchQuestions={fetchQuestions}/>}/>
+          
+        <Route exact path='/' element={<Home />}/>
+          <Route exact path="/quiz-home" element={<QuizHome  fetchQuestions={fetchQuestions}/>}/>
           <Route exact path="/quiz" element={<Quiz
     
           questions={questions}

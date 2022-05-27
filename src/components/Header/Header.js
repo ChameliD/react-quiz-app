@@ -8,7 +8,7 @@ class Header extends Component {
       <div>
         <header>
           <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
-            <div><a href='https://www.google.com/'>Online learner Hub</a></div>
+            <div><a href='/'>Online learner Hub</a></div>
           </nav>
         </header>
       </div>
