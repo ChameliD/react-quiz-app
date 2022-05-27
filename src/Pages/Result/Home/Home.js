@@ -5,7 +5,7 @@ export class Home extends Component {
     return (
         <div>
              <div>This is the home page</div>
-             <a herf="/employee-list">Go to employee List</a>
+             <a href='/employeeList'>Emplyee</a>
         </div>
     )
   }

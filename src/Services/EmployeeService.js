@@ -1,5 +1,4 @@
 import axios from 'axios';
-import React, { Component } from 'react'
 
 const EMPLOYEE_API_BASE_URL='http://localhost:8080/api/v1/employees';
 class EmployeeService {
