@@ -17,11 +17,16 @@ const Home=({name,setName,fetchQuestions})=>{
     const nevigation= useNavigate();
 
     const handleSubmit=()=>{
-        
+        if(!category||!difficulty){
+            setError(true);
+            return;
+        }
+        else{
             setError(false)
             fetchQuestions(category,difficulty)
             /*nevigation.pushState('/quiz');*/
             nevigation('/quiz', { replace: true })
+        }
     }
 
     return(
@@ -32,12 +37,7 @@ const Home=({name,setName,fetchQuestions})=>{
 
                     <div className="setting_selects">
                     {error && <ErrorMessage>Plaece Fill all the feild</ErrorMessage>}
-                    <TextField 
-                    style={{marginBottom:25}} 
-                    label="Ener Your Name" 
-                    variant="outlined" 
-                    onChange={(e)=>setName(e.target.value)}
-                    />
+                    
 
                     <TextField select 
                         label="Select Category" 

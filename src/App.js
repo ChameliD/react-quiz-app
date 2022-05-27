@@ -13,7 +13,6 @@ import Infopage from './Pages/Infopage/Infopage';
 
 
 function App() {
-  const [name,setName]=useState("");
   const[questions, setQuestions]=useState("");
   const[score,setScore]=useState(0);
 
@@ -33,15 +32,15 @@ function App() {
         <Header/> 
 
         <Routes>
-          <Route exact path="/" element={<Home name={name} setName={setName} fetchQuestions={fetchQuestions}/>}/>
+          <Route exact path="/" element={<Home  fetchQuestions={fetchQuestions}/>}/>
           <Route exact path="/quiz" element={<Quiz
-          name={name}
+    
           questions={questions}
           score={score}
           setScore={setScore}
           setQuestions={setQuestions}
           />}/>
-          <Route exact path="/result" element={<Result  name ={name} score={score}/>}/>
+          <Route exact path="/result" element={<Result score={score}/>}/>
          <Route exact path='/viewcomments' element={<ViewComments />}/>
          <Route exact path='/comments' element={<Comments />}/>
          <Route exact path='/info' element={<Infopage />}/>

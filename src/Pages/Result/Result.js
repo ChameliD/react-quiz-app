@@ -5,12 +5,12 @@ import './Result.css';
 const Result=({name,score})=>{
     const nevigation = useNavigate();
 
-    useEffect(() => {
-        if(!name){
+    /*useEffect(() => {
+        if(){
             nevigation('/')
         }
       
-    }, [name,nevigation])
+    }, [nevigation])*/
     
     return(
         <div className='result'>

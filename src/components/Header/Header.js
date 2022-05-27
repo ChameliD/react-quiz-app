@@ -1,16 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "./Header.css"
+import React, { Component } from 'react'
+import './Header.css'
 
-
-function Header() {
-  return (
-    <div className='header'>
-        <Link to="/" className='title'> Quiz Hub</Link>
-        <hr className='divider'/>
-
-    </div>
-  )
+class Header extends Component {
+  
+  render() {
+    return (
+      <div>
+        <header>
+          <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
+            <div><a href='https://www.google.com/'>Online learner Hub</a></div>
+          </nav>
+        </header>
+      </div>
+    )
+  }
 }
-
 export default Header
