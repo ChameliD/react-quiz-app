@@ -2,7 +2,7 @@ import { Button, MenuItem, TextField } from "@material-ui/core"
 import { useState } from "react"
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage"
 import Categories from "../../Data/Categories"
-import "./Home.css"
+import "./QuizHome.css"
 import {useNavigate} from "react-router-dom"
 
 

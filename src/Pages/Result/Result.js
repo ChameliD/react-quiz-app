@@ -1,10 +1,8 @@
 import { Button } from '@material-ui/core';
-import {useEffect} from 'react'
-import { useNavigate } from 'react-router-dom';
 import './Result.css';
-const Result=({name,score})=>{
-    const nevigation = useNavigate();
+const Result=({score})=>{
 
+// Here not allows to go to the result page with out name filed. Remove the name fied. hope to add user loging page
     /*useEffect(() => {
         if(){
             nevigation('/')

@@ -2,7 +2,7 @@ import Header from './components/Header/Header';
 import './App.css';
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
-import Home from './Pages/Home/Home';
+import QuizHome from './Pages/QuizHome/QuizHome';
 import Quiz from './Pages/Quiz/Quiz';
 import Result from './Pages/Result/Result';
 import { useState } from 'react';
@@ -32,7 +32,7 @@ function App() {
         <Header/> 
 
         <Routes>
-          <Route exact path="/" element={<Home  fetchQuestions={fetchQuestions}/>}/>
+          <Route exact path="/" element={<QuizHome  fetchQuestions={fetchQuestions}/>}/>
           <Route exact path="/quiz" element={<Quiz
     
           questions={questions}
