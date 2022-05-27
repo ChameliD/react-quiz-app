@@ -36,6 +36,16 @@ const Result=({name,score})=>{
             Comments and Reviews
             </Button>
 
+            <Button 
+            variant='contained'
+            color='secondary'
+            size='large'
+            style={{alignSel:"center",marginTop:20}}
+            href='/info'
+            >
+            For more infomations
+            </Button>
+
         </div>
     )
 }

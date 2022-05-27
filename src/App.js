@@ -9,6 +9,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import ViewComments from './Pages/ViewComments/ViewComments'
 import Comments from './Pages/Comments/Comments';
+import Infopage from './Pages/Infopage/Infopage';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route exact path="/result" element={<Result  name ={name} score={score}/>}/>
          <Route exact path='/viewcomments' element={<ViewComments />}/>
          <Route exact path='/comments' element={<Comments />}/>
+         <Route exact path='/info' element={<Infopage />}/>
           
         </Routes>
       </div>

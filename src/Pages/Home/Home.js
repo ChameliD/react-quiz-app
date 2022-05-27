@@ -17,16 +17,11 @@ const Home=({name,setName,fetchQuestions})=>{
     const nevigation= useNavigate();
 
     const handleSubmit=()=>{
-        if(!category||!difficulty||!name){
-            setError(true);
-            return;
-        }
-        else{
+        
             setError(false)
             fetchQuestions(category,difficulty)
             /*nevigation.pushState('/quiz');*/
             nevigation('/quiz', { replace: true })
-        }
     }
 
     return(
