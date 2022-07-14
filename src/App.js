@@ -12,6 +12,7 @@ import Comments from './Pages/Comments/Comments';
 import Infopage from './Pages/Infopage/Infopage';
 import Home from './Pages/Result/Home/Home';
 import ListEployeeComponents from './components/Employee/ListEployeeComponents';
+import CrateEmployee from './components/CrateEmployee/CrateEmployee';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route exact path='/' element={<Home />}/>
           <Route exact path="/quiz-home" element={<QuizHome  fetchQuestions={fetchQuestions}/>}/>
           <Route exact path='/employeeList' element={<ListEployeeComponents />}/>
+          <Route exact path='/addEmployee' element={<CrateEmployee />}/>
           <Route exact path="/quiz" element={<Quiz
     
           questions={questions}
